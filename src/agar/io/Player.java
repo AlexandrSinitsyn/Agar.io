@@ -221,12 +221,12 @@ public class Player implements KeyListener, MouseInputListener,
         mouse = new Vec(e.getX(), e.getY());
 
         switch (e.getButton()) {
-            case 1:
+            case 1: // Left mouse Button
                 if (Mouse)
                     split();
                 break;
 
-            case 3:
+            case 3: // Right Mouse Button
                 pressed = Field.pos.sub(mouse);
                 press = true;
                 break;
