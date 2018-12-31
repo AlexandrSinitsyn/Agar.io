@@ -57,6 +57,7 @@ public class Player implements KeyListener, MouseInputListener,
         Vec pos = new Vec(r.nextInt(width), r.nextInt(height));
         pos = pos.add(Field.pos);
         new Ball(pos, startMass, this);
+        // this function scroll the world, so you will be in the middle of the screen.
         findMe();
     }
 
@@ -69,6 +70,8 @@ public class Player implements KeyListener, MouseInputListener,
     }
 
 
+    // before starting to play, you must use one of these functions
+    // or your ball won't move.
     private boolean Mouse = false;
     private boolean Keyboard = false;
 
@@ -80,7 +83,11 @@ public class Player implements KeyListener, MouseInputListener,
     }
 
 
-    // todo          !!!!!!!!
+    // As soon as it possible, I'll do something like this:
+    //
+    // You will be able to not scrolling the world, because
+    // it will move synchronized with you:
+    // your ball will stay on one place and the world - move.
     private boolean movingWorld = false;
 
     public void setMovingWorld(boolean movingWorld) {
