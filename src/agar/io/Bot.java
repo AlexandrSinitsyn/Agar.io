@@ -94,7 +94,7 @@ public class Bot implements DrawableObject {
     }
 
     private Vec defineWay(Vec pos) {
-        // fixme       !
+        // Will be changed!!!
 
         LinkedList<Food> foodList = new LinkedList<>();
 
